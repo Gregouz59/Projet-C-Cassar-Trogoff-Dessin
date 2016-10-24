@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
     {
         int argent = 10;
         int alcool = 0;
+        int heure;
 
 
         public Form1()
