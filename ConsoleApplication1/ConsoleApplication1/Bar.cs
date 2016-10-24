@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class Program
+    class Bar
     {
         static void Main(string[] args)
         {
             //TEST COMMIT GITHUB
+            
         }
     }
 }
