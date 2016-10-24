@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
     {
         int argent = 10;
         int alcool = 0;
-        int heure;
+        int heure = 30;
 
 
         public Form1()
@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            textBox1.Text = "t'es moche";
         }
 
         private void button2_Click(object sender, EventArgs e)
