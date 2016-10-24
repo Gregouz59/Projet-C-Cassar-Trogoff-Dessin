@@ -32,19 +32,22 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.messageForTheUser = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.boiteAlcool = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 478);
+            this.button1.Location = new System.Drawing.Point(16, 588);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 23);
+            this.button1.Size = new System.Drawing.Size(145, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Allez au bar";
             this.button1.UseVisualStyleBackColor = true;
@@ -52,9 +55,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(151, 478);
+            this.button2.Location = new System.Drawing.Point(201, 588);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 23);
+            this.button2.Size = new System.Drawing.Size(143, 28);
             this.button2.TabIndex = 1;
             this.button2.Text = "Allez danser";
             this.button2.UseVisualStyleBackColor = true;
@@ -62,70 +66,88 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(283, 478);
+            this.button3.Location = new System.Drawing.Point(377, 588);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 23);
+            this.button3.Size = new System.Drawing.Size(153, 28);
             this.button3.TabIndex = 2;
             this.button3.Text = "Allez à une table";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox1
+            // messageForTheUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 452);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(386, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.messageForTheUser.Location = new System.Drawing.Point(16, 556);
+            this.messageForTheUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.messageForTheUser.Name = "messageForTheUser";
+            this.messageForTheUser.Size = new System.Drawing.Size(513, 22);
+            this.messageForTheUser.TabIndex = 4;
+            this.messageForTheUser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(40, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(-14, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(690, 409);
+            this.pictureBox1.Size = new System.Drawing.Size(1061, 524);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(616, 431);
+            this.textBox2.Location = new System.Drawing.Point(821, 530);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 20);
+            this.textBox2.Size = new System.Drawing.Size(175, 22);
             this.textBox2.TabIndex = 6;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // boiteAlcool
             // 
-            this.textBox3.Location = new System.Drawing.Point(616, 457);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 20);
-            this.textBox3.TabIndex = 7;
+            this.boiteAlcool.Location = new System.Drawing.Point(821, 562);
+            this.boiteAlcool.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.boiteAlcool.Name = "boiteAlcool";
+            this.boiteAlcool.Size = new System.Drawing.Size(175, 22);
+            this.boiteAlcool.TabIndex = 7;
+            this.boiteAlcool.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(617, 483);
+            this.textBox4.Location = new System.Drawing.Point(823, 594);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(132, 20);
+            this.textBox4.Size = new System.Drawing.Size(175, 22);
             this.textBox4.TabIndex = 8;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(159, 257);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 522);
+            this.ClientSize = new System.Drawing.Size(1045, 642);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.boiteAlcool);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.messageForTheUser);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,11 +158,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox messageForTheUser;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox boiteAlcool;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
