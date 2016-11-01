@@ -40,6 +40,7 @@
             this.boire = new System.Windows.Forms.Button();
             this.poserTable = new System.Windows.Forms.Button();
             this.saucission = new System.Windows.Forms.Button();
+            this.gratterConso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,11 +152,22 @@
             this.saucission.UseVisualStyleBackColor = true;
             this.saucission.Click += new System.EventHandler(this.saucission_Click);
             // 
+            // gratterConso
+            // 
+            this.gratterConso.Location = new System.Drawing.Point(16, 238);
+            this.gratterConso.Name = "gratterConso";
+            this.gratterConso.Size = new System.Drawing.Size(143, 64);
+            this.gratterConso.TabIndex = 12;
+            this.gratterConso.Text = "Essaye de gratter une conso à un pote";
+            this.gratterConso.UseVisualStyleBackColor = true;
+            this.gratterConso.Click += new System.EventHandler(this.gratterConso_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 642);
+            this.Controls.Add(this.gratterConso);
             this.Controls.Add(this.saucission);
             this.Controls.Add(this.poserTable);
             this.Controls.Add(this.boire);
@@ -190,6 +202,7 @@
         private System.Windows.Forms.Button boire;
         private System.Windows.Forms.Button poserTable;
         private System.Windows.Forms.Button saucission;
+        private System.Windows.Forms.Button gratterConso;
     }
 }
 

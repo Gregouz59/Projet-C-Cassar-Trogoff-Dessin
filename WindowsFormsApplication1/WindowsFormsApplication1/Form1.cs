@@ -15,6 +15,12 @@ namespace WindowsFormsApplication1
         double argent = 10;
         double alcool = 0;
         TimeSpan heure = new TimeSpan(2, 14,0);
+        TimeSpan cinqMin = TimeSpan.FromMinutes(5);
+        TimeSpan vingtMin = TimeSpan.FromMinutes(20);
+        TimeSpan dixMin = TimeSpan.FromMinutes(10);
+
+        static Random _r = new Random();
+       
 
 
         public Form1()
@@ -78,7 +84,6 @@ namespace WindowsFormsApplication1
         {
 
             messageForTheUser.Text = "Tu es assis à une table avec des copains";
-            TimeSpan dixMin = TimeSpan.FromMinutes(10);
             heure = heure.Add(dixMin);
             textBox4.Text = "Heure:  " + heure;
         }
@@ -87,10 +92,24 @@ namespace WindowsFormsApplication1
         {
             messageForTheUser.Text = "Tu viens d'acheter un saucssion";
             argent = argent - 2.5;
-            TimeSpan vingtMin = TimeSpan.FromMinutes(20);
             heure = heure.Add(vingtMin);
             textBox4.Text = "Heure:  " + heure;
             textBox2.Text = "Argent: " + argent;
+        }
+
+        private void gratterConso_Click(object sender, EventArgs e)
+        {
+            //Demander de l'argent
+            int gratteConso = _r.Next(10);
+            if (gratteConso == 1)
+            {
+                argent = argent + 2;
+                textBox2.Text = "Argent: " + argent;
+            }
+
+            //Temps perdu a gratter
+            heure = heure.Add(cinqMin);
+            textBox4.Text = "Heure:  " + heure;
         }
     }
 }
