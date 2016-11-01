@@ -37,15 +37,16 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.boiteAlcool = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.boire = new System.Windows.Forms.Button();
+            this.poserTable = new System.Windows.Forms.Button();
+            this.saucission = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(16, 588);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 28);
             this.button1.TabIndex = 0;
@@ -56,7 +57,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(201, 588);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 28);
             this.button2.TabIndex = 1;
@@ -67,7 +68,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(377, 588);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(153, 28);
             this.button3.TabIndex = 2;
@@ -78,7 +79,7 @@
             // messageForTheUser
             // 
             this.messageForTheUser.Location = new System.Drawing.Point(16, 556);
-            this.messageForTheUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.messageForTheUser.Margin = new System.Windows.Forms.Padding(4);
             this.messageForTheUser.Name = "messageForTheUser";
             this.messageForTheUser.Size = new System.Drawing.Size(513, 22);
             this.messageForTheUser.TabIndex = 4;
@@ -87,17 +88,17 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-14, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 8);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1061, 524);
+            this.pictureBox1.Size = new System.Drawing.Size(1096, 540);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(821, 530);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(175, 22);
             this.textBox2.TabIndex = 6;
@@ -106,7 +107,7 @@
             // boiteAlcool
             // 
             this.boiteAlcool.Location = new System.Drawing.Point(821, 562);
-            this.boiteAlcool.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.boiteAlcool.Margin = new System.Windows.Forms.Padding(4);
             this.boiteAlcool.Name = "boiteAlcool";
             this.boiteAlcool.Size = new System.Drawing.Size(175, 22);
             this.boiteAlcool.TabIndex = 7;
@@ -115,25 +116,49 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(823, 594);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(175, 22);
             this.textBox4.TabIndex = 8;
             // 
-            // pictureBox2
+            // boire
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(159, 257);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.boire.Location = new System.Drawing.Point(16, 36);
+            this.boire.Name = "boire";
+            this.boire.Size = new System.Drawing.Size(138, 44);
+            this.boire.TabIndex = 9;
+            this.boire.Text = "Boire un coup";
+            this.boire.UseVisualStyleBackColor = true;
+            this.boire.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // poserTable
+            // 
+            this.poserTable.Location = new System.Drawing.Point(16, 109);
+            this.poserTable.Name = "poserTable";
+            this.poserTable.Size = new System.Drawing.Size(138, 45);
+            this.poserTable.TabIndex = 10;
+            this.poserTable.Text = "Se poser à une table";
+            this.poserTable.UseVisualStyleBackColor = true;
+            this.poserTable.Click += new System.EventHandler(this.poserTable_Click);
+            // 
+            // saucission
+            // 
+            this.saucission.Location = new System.Drawing.Point(16, 176);
+            this.saucission.Name = "saucission";
+            this.saucission.Size = new System.Drawing.Size(154, 43);
+            this.saucission.TabIndex = 11;
+            this.saucission.Text = "Acheter un saucisson";
+            this.saucission.UseVisualStyleBackColor = true;
+            this.saucission.Click += new System.EventHandler(this.saucission_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 642);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.saucission);
+            this.Controls.Add(this.poserTable);
+            this.Controls.Add(this.boire);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.boiteAlcool);
             this.Controls.Add(this.textBox2);
@@ -142,12 +167,11 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,7 +187,9 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox boiteAlcool;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button boire;
+        private System.Windows.Forms.Button poserTable;
+        private System.Windows.Forms.Button saucission;
     }
 }
 
