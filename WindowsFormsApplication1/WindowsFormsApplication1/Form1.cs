@@ -75,10 +75,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            messageForTheUser.Text = "c'est quoi";
-        }
+       
 
         private void poserTable_Click(object sender, EventArgs e)
         {
@@ -110,6 +107,25 @@ namespace WindowsFormsApplication1
             //Temps perdu a gratter
             heure = heure.Add(cinqMin);
             textBox4.Text = "Heure:  " + heure;
+        }
+
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            messageForTheUser.Text = "Que veux tu consommer";
+
+        }
+
+        // je veux rendre visible les boutons des boissons uniquement quand on clique sur consommer mais j'y arrive pas
+        //pour le moment
+        private void coca_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rinceCochon_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,6 +41,8 @@
             this.poserTable = new System.Windows.Forms.Button();
             this.saucission = new System.Windows.Forms.Button();
             this.gratterConso = new System.Windows.Forms.Button();
+            this.coca = new System.Windows.Forms.Button();
+            this.rinceCochon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,11 +164,35 @@
             this.gratterConso.UseVisualStyleBackColor = true;
             this.gratterConso.Click += new System.EventHandler(this.gratterConso_Click);
             // 
+            // coca
+            // 
+            this.coca.Location = new System.Drawing.Point(325, 52);
+            this.coca.Name = "coca";
+            this.coca.Size = new System.Drawing.Size(128, 39);
+            this.coca.TabIndex = 13;
+            this.coca.Text = "Un coca svp";
+            this.coca.UseVisualStyleBackColor = true;
+            this.coca.Visible = false;
+            this.coca.Click += new System.EventHandler(this.coca_Click);
+            // 
+            // rinceCochon
+            // 
+            this.rinceCochon.Location = new System.Drawing.Point(343, 109);
+            this.rinceCochon.Name = "rinceCochon";
+            this.rinceCochon.Size = new System.Drawing.Size(110, 45);
+            this.rinceCochon.TabIndex = 14;
+            this.rinceCochon.Text = "Une rince co svp";
+            this.rinceCochon.UseVisualStyleBackColor = true;
+            this.rinceCochon.Visible = false;
+            this.rinceCochon.Click += new System.EventHandler(this.rinceCochon_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 642);
+            this.Controls.Add(this.rinceCochon);
+            this.Controls.Add(this.coca);
             this.Controls.Add(this.gratterConso);
             this.Controls.Add(this.saucission);
             this.Controls.Add(this.poserTable);
@@ -203,6 +229,8 @@
         private System.Windows.Forms.Button poserTable;
         private System.Windows.Forms.Button saucission;
         private System.Windows.Forms.Button gratterConso;
+        private System.Windows.Forms.Button coca;
+        private System.Windows.Forms.Button rinceCochon;
     }
 }
 
