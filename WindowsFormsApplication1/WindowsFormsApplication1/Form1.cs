@@ -12,8 +12,8 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        double argent = 10;
-        double alcool = 0;
+        int argent = 10;
+        int alcool = 0;
         TimeSpan heure = new TimeSpan(2, 14,0);
         TimeSpan cinqMin = TimeSpan.FromMinutes(5);
         TimeSpan vingtMin = TimeSpan.FromMinutes(20);
@@ -31,6 +31,8 @@ namespace WindowsFormsApplication1
             textBox2.Text = "Argent: " + argent;
             boiteAlcool.Text = "Alcool: " + alcool;
             textBox4.Text = "Heure:  " + heure;
+            progressBarArgent.Value = argent;
+            progressBarAlcool.Value = alcool;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -109,10 +111,11 @@ namespace WindowsFormsApplication1
         private void saucisson_Click(object sender, EventArgs e)
         {
             messageForTheUser.Text = "Tu viens d'acheter un saucssion";
-            argent = argent - 2.5;
+            argent = argent - 3;
             heure = heure.Add(vingtMin);
             textBox4.Text = "Heure:  " + heure;
             textBox2.Text = "Argent: " + argent;
+            progressBarArgent.Value = argent;
         }
 
         private void allerAuBar_Click(object sender, EventArgs e)
@@ -125,10 +128,11 @@ namespace WindowsFormsApplication1
         private void cocacola_Click(object sender, EventArgs e)
         {
             messageForTheUser.Text = "Tu viens d'acheter un coca";
-            argent = argent - 0.8;
+            argent = argent - 1;
             heure = heure.Add(cinqMin);
             textBox4.Text = "Heure:  " + heure;
             textBox2.Text = "Argent: " + argent;
+            progressBarArgent.Value = argent;
             cocacola.Visible = false;
             rinceCo.Visible = false;
         }
@@ -142,8 +146,20 @@ namespace WindowsFormsApplication1
             textBox4.Text = "Heure:  " + heure;
             textBox2.Text = "Argent: " + argent;
             boiteAlcool.Text = "Alcool: " + alcool;
+            progressBarArgent.Value = argent;
+            progressBarAlcool.Value = alcool;
             cocacola.Visible = false;
             rinceCo.Visible = false;
+        }
+
+        private void progressBarArgent_Click(object sender, EventArgs e)
+        {
+            progressBarArgent.Maximum = 50;
+        }
+
+        private void progressBarAlcool_Click(object sender, EventArgs e)
+        {
+            progressBarAlcool.Maximum = 20;
         }
     }
 }

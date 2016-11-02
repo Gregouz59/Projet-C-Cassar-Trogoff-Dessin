@@ -43,6 +43,8 @@
             this.allerAuBar = new System.Windows.Forms.PictureBox();
             this.cocacola = new System.Windows.Forms.PictureBox();
             this.rinceCo = new System.Windows.Forms.PictureBox();
+            this.progressBarArgent = new System.Windows.Forms.ProgressBar();
+            this.progressBarAlcool = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saucisson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allerAuBar)).BeginInit();
@@ -104,7 +106,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(821, 530);
+            this.textBox2.Location = new System.Drawing.Point(821, 505);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(175, 22);
@@ -191,11 +193,30 @@
             this.rinceCo.Visible = false;
             this.rinceCo.Click += new System.EventHandler(this.rinceCo_Click);
             // 
+            // progressBarArgent
+            // 
+            this.progressBarArgent.Location = new System.Drawing.Point(821, 474);
+            this.progressBarArgent.Name = "progressBarArgent";
+            this.progressBarArgent.Size = new System.Drawing.Size(175, 24);
+            this.progressBarArgent.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBarArgent.TabIndex = 19;
+            this.progressBarArgent.Click += new System.EventHandler(this.progressBarArgent_Click);
+            // 
+            // progressBarAlcool
+            // 
+            this.progressBarAlcool.Location = new System.Drawing.Point(821, 535);
+            this.progressBarAlcool.Name = "progressBarAlcool";
+            this.progressBarAlcool.Size = new System.Drawing.Size(175, 23);
+            this.progressBarAlcool.TabIndex = 20;
+            this.progressBarAlcool.Click += new System.EventHandler(this.progressBarAlcool_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 642);
+            this.Controls.Add(this.progressBarAlcool);
+            this.Controls.Add(this.progressBarArgent);
             this.Controls.Add(this.rinceCo);
             this.Controls.Add(this.cocacola);
             this.Controls.Add(this.allerAuBar);
@@ -240,6 +261,8 @@
         private System.Windows.Forms.PictureBox allerAuBar;
         private System.Windows.Forms.PictureBox cocacola;
         private System.Windows.Forms.PictureBox rinceCo;
+        private System.Windows.Forms.ProgressBar progressBarArgent;
+        private System.Windows.Forms.ProgressBar progressBarAlcool;
     }
 }
 
