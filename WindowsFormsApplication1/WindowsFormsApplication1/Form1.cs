@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1
         TimeSpan cinqMin = TimeSpan.FromMinutes(5);
         TimeSpan vingtMin = TimeSpan.FromMinutes(20);
         TimeSpan dixMin = TimeSpan.FromMinutes(10);
+        TimeSpan vingtCinqMin = TimeSpan.FromMinutes(25);
 
         static Random _r = new Random();
        
@@ -83,15 +84,7 @@ namespace WindowsFormsApplication1
             messageForTheUser.Text = "Tu es assis à une table avec des copains";
             heure = heure.Add(dixMin);
             textBox4.Text = "Heure:  " + heure;
-        }
-
-        private void saucission_Click(object sender, EventArgs e)
-        {
-            messageForTheUser.Text = "Tu viens d'acheter un saucssion";
-            argent = argent - 2.5;
-            heure = heure.Add(vingtMin);
-            textBox4.Text = "Heure:  " + heure;
-            textBox2.Text = "Argent: " + argent;
+        
         }
 
         private void gratterConso_Click(object sender, EventArgs e)
@@ -110,22 +103,47 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            messageForTheUser.Text = "Que veux tu consommer";
+      
+        
 
+        private void saucisson_Click(object sender, EventArgs e)
+        {
+            messageForTheUser.Text = "Tu viens d'acheter un saucssion";
+            argent = argent - 2.5;
+            heure = heure.Add(vingtMin);
+            textBox4.Text = "Heure:  " + heure;
+            textBox2.Text = "Argent: " + argent;
         }
 
-        // je veux rendre visible les boutons des boissons uniquement quand on clique sur consommer mais j'y arrive pas
-        //pour le moment
-        private void coca_Click(object sender, EventArgs e)
+        private void allerAuBar_Click(object sender, EventArgs e)
         {
-
+            messageForTheUser.Text = "Que veux tu consommer ?";
+            cocacola.Visible = true;
+            rinceCo.Visible = true;
         }
 
-        private void rinceCochon_Click(object sender, EventArgs e)
+        private void cocacola_Click(object sender, EventArgs e)
         {
+            messageForTheUser.Text = "Tu viens d'acheter un coca";
+            argent = argent - 0.8;
+            heure = heure.Add(cinqMin);
+            textBox4.Text = "Heure:  " + heure;
+            textBox2.Text = "Argent: " + argent;
+            cocacola.Visible = false;
+            rinceCo.Visible = false;
+        }
 
+        private void rinceCo_Click(object sender, EventArgs e)
+        {
+            messageForTheUser.Text = "Tu viens d'acheter une rince cochon";
+            argent = argent - 2;
+            heure = heure.Add(vingtCinqMin);
+            alcool = alcool + 1;
+            textBox4.Text = "Heure:  " + heure;
+            textBox2.Text = "Argent: " + argent;
+            boiteAlcool.Text = "Alcool: " + alcool;
+            cocacola.Visible = false;
+            rinceCo.Visible = false;
         }
     }
 }

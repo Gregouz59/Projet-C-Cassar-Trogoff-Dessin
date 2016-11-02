@@ -37,13 +37,17 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.boiteAlcool = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.boire = new System.Windows.Forms.Button();
             this.poserTable = new System.Windows.Forms.Button();
-            this.saucission = new System.Windows.Forms.Button();
             this.gratterConso = new System.Windows.Forms.Button();
-            this.coca = new System.Windows.Forms.Button();
-            this.rinceCochon = new System.Windows.Forms.Button();
+            this.saucisson = new System.Windows.Forms.PictureBox();
+            this.allerAuBar = new System.Windows.Forms.PictureBox();
+            this.cocacola = new System.Windows.Forms.PictureBox();
+            this.rinceCo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saucisson)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allerAuBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cocacola)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rinceCo)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -124,19 +128,9 @@
             this.textBox4.Size = new System.Drawing.Size(175, 22);
             this.textBox4.TabIndex = 8;
             // 
-            // boire
-            // 
-            this.boire.Location = new System.Drawing.Point(16, 36);
-            this.boire.Name = "boire";
-            this.boire.Size = new System.Drawing.Size(138, 44);
-            this.boire.TabIndex = 9;
-            this.boire.Text = "Boire un coup";
-            this.boire.UseVisualStyleBackColor = true;
-            this.boire.Click += new System.EventHandler(this.button4_Click_1);
-            // 
             // poserTable
             // 
-            this.poserTable.Location = new System.Drawing.Point(16, 109);
+            this.poserTable.Location = new System.Drawing.Point(21, 208);
             this.poserTable.Name = "poserTable";
             this.poserTable.Size = new System.Drawing.Size(138, 45);
             this.poserTable.TabIndex = 10;
@@ -144,19 +138,9 @@
             this.poserTable.UseVisualStyleBackColor = true;
             this.poserTable.Click += new System.EventHandler(this.poserTable_Click);
             // 
-            // saucission
-            // 
-            this.saucission.Location = new System.Drawing.Point(16, 176);
-            this.saucission.Name = "saucission";
-            this.saucission.Size = new System.Drawing.Size(154, 43);
-            this.saucission.TabIndex = 11;
-            this.saucission.Text = "Acheter un saucisson";
-            this.saucission.UseVisualStyleBackColor = true;
-            this.saucission.Click += new System.EventHandler(this.saucission_Click);
-            // 
             // gratterConso
             // 
-            this.gratterConso.Location = new System.Drawing.Point(16, 238);
+            this.gratterConso.Location = new System.Drawing.Point(16, 382);
             this.gratterConso.Name = "gratterConso";
             this.gratterConso.Size = new System.Drawing.Size(143, 64);
             this.gratterConso.TabIndex = 12;
@@ -164,39 +148,60 @@
             this.gratterConso.UseVisualStyleBackColor = true;
             this.gratterConso.Click += new System.EventHandler(this.gratterConso_Click);
             // 
-            // coca
+            // saucisson
             // 
-            this.coca.Location = new System.Drawing.Point(325, 52);
-            this.coca.Name = "coca";
-            this.coca.Size = new System.Drawing.Size(128, 39);
-            this.coca.TabIndex = 13;
-            this.coca.Text = "Un coca svp";
-            this.coca.UseVisualStyleBackColor = true;
-            this.coca.Visible = false;
-            this.coca.Click += new System.EventHandler(this.coca_Click);
+            this.saucisson.Image = ((System.Drawing.Image)(resources.GetObject("saucisson.Image")));
+            this.saucisson.Location = new System.Drawing.Point(25, 273);
+            this.saucisson.Name = "saucisson";
+            this.saucisson.Size = new System.Drawing.Size(113, 88);
+            this.saucisson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.saucisson.TabIndex = 15;
+            this.saucisson.TabStop = false;
+            this.saucisson.Click += new System.EventHandler(this.saucisson_Click);
             // 
-            // rinceCochon
+            // allerAuBar
             // 
-            this.rinceCochon.Location = new System.Drawing.Point(343, 109);
-            this.rinceCochon.Name = "rinceCochon";
-            this.rinceCochon.Size = new System.Drawing.Size(110, 45);
-            this.rinceCochon.TabIndex = 14;
-            this.rinceCochon.Text = "Une rince co svp";
-            this.rinceCochon.UseVisualStyleBackColor = true;
-            this.rinceCochon.Visible = false;
-            this.rinceCochon.Click += new System.EventHandler(this.rinceCochon_Click);
+            this.allerAuBar.Image = ((System.Drawing.Image)(resources.GetObject("allerAuBar.Image")));
+            this.allerAuBar.Location = new System.Drawing.Point(25, 34);
+            this.allerAuBar.Name = "allerAuBar";
+            this.allerAuBar.Size = new System.Drawing.Size(158, 101);
+            this.allerAuBar.TabIndex = 16;
+            this.allerAuBar.TabStop = false;
+            this.allerAuBar.Click += new System.EventHandler(this.allerAuBar_Click);
+            // 
+            // cocacola
+            // 
+            this.cocacola.Image = ((System.Drawing.Image)(resources.GetObject("cocacola.Image")));
+            this.cocacola.Location = new System.Drawing.Point(285, 34);
+            this.cocacola.Name = "cocacola";
+            this.cocacola.Size = new System.Drawing.Size(104, 101);
+            this.cocacola.TabIndex = 17;
+            this.cocacola.TabStop = false;
+            this.cocacola.Visible = false;
+            this.cocacola.Click += new System.EventHandler(this.cocacola_Click);
+            // 
+            // rinceCo
+            // 
+            this.rinceCo.Image = ((System.Drawing.Image)(resources.GetObject("rinceCo.Image")));
+            this.rinceCo.Location = new System.Drawing.Point(303, 180);
+            this.rinceCo.Name = "rinceCo";
+            this.rinceCo.Size = new System.Drawing.Size(140, 221);
+            this.rinceCo.TabIndex = 18;
+            this.rinceCo.TabStop = false;
+            this.rinceCo.Visible = false;
+            this.rinceCo.Click += new System.EventHandler(this.rinceCo_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 642);
-            this.Controls.Add(this.rinceCochon);
-            this.Controls.Add(this.coca);
+            this.Controls.Add(this.rinceCo);
+            this.Controls.Add(this.cocacola);
+            this.Controls.Add(this.allerAuBar);
+            this.Controls.Add(this.saucisson);
             this.Controls.Add(this.gratterConso);
-            this.Controls.Add(this.saucission);
             this.Controls.Add(this.poserTable);
-            this.Controls.Add(this.boire);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.boiteAlcool);
             this.Controls.Add(this.textBox2);
@@ -210,6 +215,10 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saucisson)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allerAuBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cocacola)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rinceCo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,12 +234,12 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox boiteAlcool;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button boire;
         private System.Windows.Forms.Button poserTable;
-        private System.Windows.Forms.Button saucission;
         private System.Windows.Forms.Button gratterConso;
-        private System.Windows.Forms.Button coca;
-        private System.Windows.Forms.Button rinceCochon;
+        private System.Windows.Forms.PictureBox saucisson;
+        private System.Windows.Forms.PictureBox allerAuBar;
+        private System.Windows.Forms.PictureBox cocacola;
+        private System.Windows.Forms.PictureBox rinceCo;
     }
 }
 
