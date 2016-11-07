@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        int argent = 10;
+        int argent = 50;
         int alcool = 0;
         TimeSpan heure = new TimeSpan(2, 14,0);
         TimeSpan cinqMin = TimeSpan.FromMinutes(5);
@@ -85,8 +85,8 @@ namespace WindowsFormsApplication1
 
             messageForTheUser.Text = "Tu es assis à une table avec des copains";
             heure = heure.Add(dixMin);
-            textBox4.Text = "Heure:  " + heure;
-        
+            actualiserLesVariables();
+
         }
 
         private void gratterConso_Click(object sender, EventArgs e)
@@ -96,16 +96,14 @@ namespace WindowsFormsApplication1
             if (gratteConso == 1)
             {
                 argent = argent + 2;
-                textBox2.Text = "Argent: " + argent;
+                actualiserLesVariables();
             }
 
             //Temps perdu a gratter
             heure = heure.Add(cinqMin);
-            textBox4.Text = "Heure:  " + heure;
+            actualiserLesVariables();
         }
 
-
-      
         
 
         private void saucisson_Click(object sender, EventArgs e)
@@ -113,9 +111,7 @@ namespace WindowsFormsApplication1
             messageForTheUser.Text = "Tu viens d'acheter un saucssion";
             argent = argent - 3;
             heure = heure.Add(vingtMin);
-            textBox4.Text = "Heure:  " + heure;
-            textBox2.Text = "Argent: " + argent;
-            progressBarArgent.Value = argent;
+            actualiserLesVariables();
         }
 
         private void allerAuBar_Click(object sender, EventArgs e)
@@ -130,9 +126,7 @@ namespace WindowsFormsApplication1
             messageForTheUser.Text = "Tu viens d'acheter un coca";
             argent = argent - 1;
             heure = heure.Add(cinqMin);
-            textBox4.Text = "Heure:  " + heure;
-            textBox2.Text = "Argent: " + argent;
-            progressBarArgent.Value = argent;
+            actualiserLesVariables();
             cocacola.Visible = false;
             rinceCo.Visible = false;
         }
@@ -143,11 +137,7 @@ namespace WindowsFormsApplication1
             argent = argent - 2;
             heure = heure.Add(vingtCinqMin);
             alcool = alcool + 1;
-            textBox4.Text = "Heure:  " + heure;
-            textBox2.Text = "Argent: " + argent;
-            boiteAlcool.Text = "Alcool: " + alcool;
-            progressBarArgent.Value = argent;
-            progressBarAlcool.Value = alcool;
+            actualiserLesVariables();
             cocacola.Visible = false;
             rinceCo.Visible = false;
         }
@@ -160,6 +150,15 @@ namespace WindowsFormsApplication1
         private void progressBarAlcool_Click(object sender, EventArgs e)
         {
             progressBarAlcool.Maximum = 20;
+        }
+
+        private void actualiserLesVariables()
+        {
+            textBox4.Text = "Heure:  " + heure;
+            textBox2.Text = "Argent: " + argent;
+            boiteAlcool.Text = "Alcool: " + alcool;
+            progressBarArgent.Value = argent;
+            progressBarAlcool.Value = alcool;
         }
     }
 }
