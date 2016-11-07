@@ -28,34 +28,19 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             this.Text = "Projet Bar";
-            textBox2.Text = "Argent: " + argent;
-            boiteAlcool.Text = "Alcool: " + alcool;
-            textBox4.Text = "Heure:  " + heure;
+            actualiserLesVariables();
+        }
+
+        private void actualiserLesVariables()
+        {
+            heureActuelle.Text = "Heure:  " + heure;
+            argentDansLePorteMonnaie.Text = "Argent" + argent;
+            alcoolDansLeSang.Text = "Alcool: " + alcool;
             progressBarArgent.Value = argent;
             progressBarAlcool.Value = alcool;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            messageForTheUser.Text = "t'es moche";
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            messageForTheUser.Text = "Bouton 2";
-            pictureBox1.Visible = false;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            messageForTheUser.Text = "Bouton 3";
-            pictureBox1.Visible = true;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            messageForTheUser.Text = "Bouton 4";
-        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -152,13 +137,10 @@ namespace WindowsFormsApplication1
             progressBarAlcool.Maximum = 20;
         }
 
-        private void actualiserLesVariables()
+
+        private void heureActuelle_TextChanged(object sender, EventArgs e)
         {
-            textBox4.Text = "Heure:  " + heure;
-            textBox2.Text = "Argent: " + argent;
-            boiteAlcool.Text = "Alcool: " + alcool;
-            progressBarArgent.Value = argent;
-            progressBarAlcool.Value = alcool;
+
         }
     }
 }

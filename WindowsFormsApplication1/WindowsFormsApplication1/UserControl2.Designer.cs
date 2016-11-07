@@ -1,0 +1,73 @@
+﻿namespace WindowsFormsApplication1
+{
+    partial class UserControl2
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl2));
+            this.userControl11 = new WindowsFormsApplication1.UserControl1();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // userControl11
+            // 
+            this.userControl11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl11.BackgroundImage")));
+            this.userControl11.ForeColor = System.Drawing.Color.Black;
+            this.userControl11.Location = new System.Drawing.Point(0, 0);
+            this.userControl11.MyProperty = null;
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(601, 377);
+            this.userControl11.TabIndex = 1;
+            this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(348, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
+            // UserControl2
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.userControl11);
+            this.Name = "UserControl2";
+            this.Size = new System.Drawing.Size(601, 374);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+        private UserControl1 userControl11;
+        private System.Windows.Forms.Label label1;
+    }
+}

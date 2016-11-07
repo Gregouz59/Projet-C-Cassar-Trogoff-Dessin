@@ -29,14 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.messageForTheUser = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.boiteAlcool = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.argentDansLePorteMonnaie = new System.Windows.Forms.TextBox();
+            this.alcoolDansLeSang = new System.Windows.Forms.TextBox();
+            this.heureActuelle = new System.Windows.Forms.TextBox();
             this.poserTable = new System.Windows.Forms.Button();
             this.gratterConso = new System.Windows.Forms.Button();
             this.saucisson = new System.Windows.Forms.PictureBox();
@@ -45,45 +42,13 @@
             this.rinceCo = new System.Windows.Forms.PictureBox();
             this.progressBarArgent = new System.Windows.Forms.ProgressBar();
             this.progressBarAlcool = new System.Windows.Forms.ProgressBar();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saucisson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allerAuBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cocacola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rinceCo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(16, 588);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Allez au bar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(201, 588);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 28);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Allez danser";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(377, 588);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 28);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Allez à une table";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // messageForTheUser
             // 
@@ -104,31 +69,32 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox2
+            // argentDansLePorteMonnaie
             // 
-            this.textBox2.Location = new System.Drawing.Point(821, 505);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 22);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.argentDansLePorteMonnaie.Location = new System.Drawing.Point(821, 505);
+            this.argentDansLePorteMonnaie.Margin = new System.Windows.Forms.Padding(4);
+            this.argentDansLePorteMonnaie.Name = "argentDansLePorteMonnaie";
+            this.argentDansLePorteMonnaie.Size = new System.Drawing.Size(175, 22);
+            this.argentDansLePorteMonnaie.TabIndex = 6;
+            this.argentDansLePorteMonnaie.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // boiteAlcool
+            // alcoolDansLeSang
             // 
-            this.boiteAlcool.Location = new System.Drawing.Point(821, 562);
-            this.boiteAlcool.Margin = new System.Windows.Forms.Padding(4);
-            this.boiteAlcool.Name = "boiteAlcool";
-            this.boiteAlcool.Size = new System.Drawing.Size(175, 22);
-            this.boiteAlcool.TabIndex = 7;
-            this.boiteAlcool.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.alcoolDansLeSang.Location = new System.Drawing.Point(821, 562);
+            this.alcoolDansLeSang.Margin = new System.Windows.Forms.Padding(4);
+            this.alcoolDansLeSang.Name = "alcoolDansLeSang";
+            this.alcoolDansLeSang.Size = new System.Drawing.Size(175, 22);
+            this.alcoolDansLeSang.TabIndex = 7;
+            this.alcoolDansLeSang.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // heureActuelle
             // 
-            this.textBox4.Location = new System.Drawing.Point(823, 594);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(175, 22);
-            this.textBox4.TabIndex = 8;
+            this.heureActuelle.Location = new System.Drawing.Point(823, 594);
+            this.heureActuelle.Margin = new System.Windows.Forms.Padding(4);
+            this.heureActuelle.Name = "heureActuelle";
+            this.heureActuelle.Size = new System.Drawing.Size(175, 22);
+            this.heureActuelle.TabIndex = 8;
+            this.heureActuelle.TextChanged += new System.EventHandler(this.heureActuelle_TextChanged);
             // 
             // poserTable
             // 
@@ -223,13 +189,10 @@
             this.Controls.Add(this.saucisson);
             this.Controls.Add(this.gratterConso);
             this.Controls.Add(this.poserTable);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.boiteAlcool);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.heureActuelle);
+            this.Controls.Add(this.alcoolDansLeSang);
+            this.Controls.Add(this.argentDansLePorteMonnaie);
             this.Controls.Add(this.messageForTheUser);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
@@ -246,15 +209,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox messageForTheUser;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox boiteAlcool;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox argentDansLePorteMonnaie;
+        private System.Windows.Forms.TextBox alcoolDansLeSang;
+        private System.Windows.Forms.TextBox heureActuelle;
         private System.Windows.Forms.Button poserTable;
         private System.Windows.Forms.Button gratterConso;
         private System.Windows.Forms.PictureBox saucisson;
@@ -263,6 +222,7 @@
         private System.Windows.Forms.PictureBox rinceCo;
         private System.Windows.Forms.ProgressBar progressBarArgent;
         private System.Windows.Forms.ProgressBar progressBarAlcool;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
